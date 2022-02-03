@@ -4,10 +4,12 @@
     </title>
 </head>
 
-<?php
-echo "Hello World";
-?>
-
 <body>
-    Line One: how are you?
+    Line One: 
+    
+    <?php
+    echo "Hello World,";
+    ?>
+
+    how are you?
 </body>
