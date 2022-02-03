@@ -10,12 +10,25 @@
 
     <?php
     echo "Hello World,";
+    ?>
+
+    how are you?<br><br>
+
+    <?php
+
+    // Double quotes"" use value of the varible, single quotes'' use the name of the variable
 
     $var1 = 2;
     $var2 = 4;
     $var3 = 6;
-    
+    $var4 = 1;
+    $var5 = $var3 + $var4;
+
+    $firstName = "Jacob";
+    $lastName = "Hamilton";
+
+    echo $var1 + $var2;
+    echo $var5;
     ?>
-    
-    how are you?
+
 </body>
