@@ -15,9 +15,7 @@
     how are you?<br><br>
 
     <?php
-
     // Double quotes"" use value of the varible, single quotes'' use the name of the variable
-
     $var1 = 2;
     $var2 = 4;
     $var3 = 6;
@@ -28,6 +26,8 @@
     $lastName = "Hamilton";
 
     echo $var1 + $var2;
+    ?>
+    <?php
     echo $var5;
     ?>
 
