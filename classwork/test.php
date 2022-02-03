@@ -16,7 +16,7 @@
 
     <?php
     // Double quotes"" use value of the varible, single quotes'' use the name of the variable
-    $var1 = 2;
+    $var1 = 4;
     $var2 = 4;
     $var3 = 6;
     $var4 = 1;
