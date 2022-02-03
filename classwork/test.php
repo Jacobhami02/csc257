@@ -27,6 +27,7 @@
 
     echo $var1 + $var2;
     ?>
+    <br><br>
     <?php
     echo $var5;
     ?>
