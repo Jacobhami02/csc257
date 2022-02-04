@@ -32,4 +32,8 @@
     echo $var5;
     ?>
 
+    <a href="http://localhost:8080/csc257/homework/travelPage.php">
+      <input type="submit"/>
+    </a>
+
 </body>
