@@ -33,7 +33,7 @@
     ?>
 
     <a href="http://localhost:8080/csc257/homework/travelPage.php">
-      <input type="submit"/>
+    <button type="button">Page Two</button>
     </a>
 
 </body>
