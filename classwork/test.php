@@ -32,7 +32,7 @@
     echo $var5;
     ?>
 
-    <a href="http://localhost:8080/csc257/homework/travelPage.php">
+    <a href="http://localhost:8080/csc257/homework/02-02-202_form.php">
     <button type="button">Page Two</button>
     </a>
 
