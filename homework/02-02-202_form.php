@@ -25,6 +25,12 @@
   <input type="text">
 </form>
 
+<h4>Type your city below:</h4>
+<form>
+  <input type="text">
+</form>
+
+
 <form name="form1" id="form1" > <!-- action="/action_page.php" -->
   Select your state of departure below: <br><br>
   <select> <!-- name="subject" id="subject" -->
