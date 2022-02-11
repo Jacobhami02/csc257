@@ -1,8 +1,29 @@
-
-  .fontSize{ 
-    font-weight: 50000;
-  }
-  #cruiseTitleStyle{
-    font-size: 100px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin:5%;
+  width: 50%;
+  padding: 10px;
 }
-
+#cruise_form {
+  
+  background-color:rgba(0, 0, 73, 0.562);color:white;padding:3%;
+  border: 5px solid rgb(226, 226, 226);
+  width: 500px;
+  font-size: 16px;
+  line-height: 30px; 
+  padding: 5px;
+}
+.form_label {
+  width: 200px;
+  display: inline-block;
+}
+.form_textbox {
+  width: 250px; 
+}
+.form_dropdown {
+  width: 250px;
+}
+#grad{
+background-image: linear-gradient(90deg, rgb(0,0,73) 0%, #000f97 40%, #6b68ca 75%);
+color: white;
+}
