@@ -56,7 +56,7 @@
     <label for="mailingList_yes">Yes</label>
     <input type="radio" id="mailingList_no" name="mailingList" value="no" required>
     <label for="mailingList_no">No</label>
-    
+
     <br><br>
 
     <!-- Terms -->
@@ -75,5 +75,6 @@
   </a>
 </div>
 
+<!-- ----- -->
 </body>
 </html>
