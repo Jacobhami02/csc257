@@ -1,9 +1,5 @@
 <?php
 
-
-print_r($_POST);
-
-
 $firstName = $_POST["firstName"];
 $lastName = $_POST["lastName"];
 $city = $_POST["city"];
@@ -32,16 +28,23 @@ switch($state) {
     case "westerncaribbean":
         $userFriendlyDestination = "Western Caribbean";
         break;
-    case "NJ":
-        $userFriendlyDestination = "New Jersey";
+    case "southerncaribbean":
+        $userFriendlyDestination = "Southern Caribbean";
         break;   
+    case "bahamas":
+        $userFriendlyDestination = "Bahamas";
+        break;   
+    case "bermuda":
+        $userFriendlyDestination = "Bermuda";
+        break;   
+            
 }
 
 echo "Thank you $firstName. We have recorded the following entry:<br><br>";
 echo "<strong>Name:</strong> $firstName $lastName<br>";
 echo "<strong>City:</strong> $city<br>";
 echo "<strong>Residence:</strong> $userFriendlyState<br>";
-echo "<strong>Preferred Desitination:</strong> $preferredDestination<br>";
+echo "<strong>Preferred Desitination:</strong> $userFriendlyDestination<br>";
 
 echo "<br><br>"
 
@@ -51,6 +54,7 @@ echo "<br><br>"
 //     echo "You have not been opted into our mailing list.";
 // }
 
+// print_r($_POST);
 // $_POST -> method="post"
 // $_GET -> method ="get"
 // $_REQUEST -> method="get", then method="post"
