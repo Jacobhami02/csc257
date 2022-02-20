@@ -1,5 +1,8 @@
 <?php
 
+print_r($_POST);
+echo "<br><br>";
+
 $firstName = $_POST["firstName"];
 $lastName = $_POST["lastName"];
 $city = $_POST["city"];
@@ -17,6 +20,12 @@ switch($state) {
         break;
     case "NJ":
         $userFriendlyState = "New Jersey";
+        break;   
+    case "RI":
+        $userFriendlyState = "Rhode Island";
+        break;
+    case "MA":
+        $userFriendlyState = "Massachusetts";
         break;   
 }
 
@@ -36,9 +45,27 @@ switch($state) {
         break;   
     case "bermuda":
         $userFriendlyDestination = "Bermuda";
-        break;   
-            
+        break;       
 }
+
+$stateArray = array(
+    1 => "CT",
+    2 => "NY",
+    3 => "NJ",
+    4 => "RI",
+    5 => "MA",
+);
+
+$destinationsArray = array(
+    "CT" => "Connecticut",
+    "NY" => "New York",
+    "NJ" => "New Jersey",
+    "RI" => "Rhode Island",
+    "MA" => "Massachusetts",
+);
+
+var_dump($stateArray);
+var_dump($destinationArray);
 
 echo "Thank you $firstName. We have recorded the following entry:<br><br>";
 echo "<strong>Name:</strong> $firstName $lastName<br>";
@@ -54,7 +81,6 @@ echo "<br><br>"
 //     echo "You have not been opted into our mailing list.";
 // }
 
-// print_r($_POST);
 // $_POST -> method="post"
 // $_GET -> method ="get"
 // $_REQUEST -> method="get", then method="post"
