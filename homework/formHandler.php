@@ -30,7 +30,7 @@ switch($state) {
 }
 
 $userFriendlyDestination = "";
-switch($state) {
+switch($preferredDestination) {
     case "easterncaribbean":
         $userFriendlyDestination = "Eastern Caribbean";
         break;
@@ -47,25 +47,6 @@ switch($state) {
         $userFriendlyDestination = "Bermuda";
         break;       
 }
-
-$stateArray = array(
-    1 => "CT",
-    2 => "NY",
-    3 => "NJ",
-    4 => "RI",
-    5 => "MA",
-);
-
-$destinationsArray = array(
-    "CT" => "Connecticut",
-    "NY" => "New York",
-    "NJ" => "New Jersey",
-    "RI" => "Rhode Island",
-    "MA" => "Massachusetts",
-);
-
-var_dump($stateArray);
-var_dump($destinationArray);
 
 echo "Thank you $firstName. We have recorded the following entry:<br><br>";
 echo "<strong>Name:</strong> $firstName $lastName<br>";
