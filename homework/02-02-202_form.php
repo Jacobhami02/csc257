@@ -46,7 +46,7 @@ $destinationArray = array(
     <label for="state" class="form_label">Your State:</label>
     <select id="state" name="state" class="form_dropdown" required>
         <option value="">Please select a State...</option>
-        <option value="CT"><?php echo "$stateArray[0]";?></option>
+        <option value="CT">print_r($statesArray[0])</option>
         <option value="MA"><?php echo "$stateArray[4]";?></option>
         <option value="NY"><?php echo "$stateArray[1]";?></option>
         <option value="NJ"><?php echo "$stateArray[2]";?></option>
