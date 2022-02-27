@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+
+include "functions.php";
+
 $stateArray = array(
     "Connecticut",
     "New York",
