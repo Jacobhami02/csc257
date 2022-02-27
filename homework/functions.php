@@ -13,6 +13,7 @@
 // echo sayHello("Jim");
 
 
+
 function stateArrayReturn($stateName){
     $stateArray = array(
         "CT"=>"Connecticut",
@@ -22,6 +23,17 @@ function stateArrayReturn($stateName){
         "MA"=>"Massachusetts"
     );
     return $stateArray[$stateName];
+}
+
+function destinationArrayReturn($destinationName){
+    $destinationArray = array(
+        "EC"=>"Eastern Caribbean",
+        "WC"=>"Western Caribbean",
+        "SC"=>"Southern Carribbean",
+        "BH"=>"Bahamas",
+        "BD"=>"Bermuda"
+    );
+        return $destinationArray[$destinationName];
 }
 
 

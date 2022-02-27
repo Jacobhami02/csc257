@@ -1,26 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-
-include "functions.php";
-
-$stateArray = array(
-    "Connecticut",
-    "New York",
-    "New Jersey",
-    "Rhode Island",
-    "Massachusetts"
-);
-
-$destinationArray = array(
-    "Eastern Caribbean",
-    "Western Caribbean",
-    "Southern Carribbean",
-    "Bahamas",
-    "Bermuda"
-);
-?>
-
 <head>
     <title>Cruise Entry Form</title>
     <link rel="stylesheet" href="styles.css">
@@ -46,14 +25,15 @@ $destinationArray = array(
     <br>
     
     <!-- State -->
+    <?php include "functions.php"; ?>
     <label for="state" class="form_label">Your State:</label>
     <select id="state" name="state" class="form_dropdown" required>
         <option value="">Please select a State...</option>
-        <option value="CT">print_r($statesArray[0])</option>
-        <option value="MA"><?php echo "$stateArray[4]";?></option>
-        <option value="NY"><?php echo "$stateArray[1]";?></option>
-        <option value="NJ"><?php echo "$stateArray[2]";?></option>
-        <option value="RI"><?php echo "$stateArray[3]";?></option>
+        <option value="CT"><?php print_r(stateArrayReturn("CT"))?></option>
+        <option value="MA"><?php print_r(stateArrayReturn("MA"))?></option>
+        <option value="NY"><?php print_r(stateArrayReturn("NY"))?></option>
+        <option value="NJ"><?php print_r(stateArrayReturn("NJ"))?></option>
+        <option value="RI"><?php print_r(stateArrayReturn("RI"))?></option>
     </select>
 
     <br>
@@ -62,11 +42,11 @@ $destinationArray = array(
     <label for="preferredDestination" class="form_label">Preferred Destination:</label>
     <select id="preferredDestination" name="preferredDestination" class="form_dropdown" required>
         <option value="">Please select a destination...</option>
-        <option value="easterncaribbean"><?php echo "$destinationArray[0]";?></option>
-        <option value="westerncaribbean"><?php echo "$destinationArray[1]";?></option>
-        <option value="southerncaribbean"><?php echo "$destinationArray[2]";?></option>
-        <option value="bahamas"><?php echo "$destinationArray[3]";?></option>
-        <option value="bermuda"><?php echo "$destinationArray[4]";?></option>
+        <option value="easterncaribbean"><?php print_r(destinationArrayReturn("EC"))?></option>
+        <option value="westerncaribbean"><?php print_r(destinationArrayReturn("WC"))?></option>
+        <option value="southerncaribbean"><?php print_r(destinationArrayReturn("SC"))?></option>
+        <option value="bahamas"><?php print_r(destinationArrayReturn("BH"))?></option>
+        <option value="bermuda"><?php print_r(destinationArrayReturn("BD"))?></option>
     </select>
 
     <br>
