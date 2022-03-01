@@ -12,7 +12,14 @@
 
 // echo sayHello("Jim");
 
+function calculateTax($subtotal){
 
+    $ct = 6.35;
+    $ny = 7.00;
+    $tax = $ct / 10;
+    $total = $tax + $subtotal;
+    return $total;
+};
 
 function stateArrayReturn($stateName){
     $stateArray = array(
@@ -37,5 +44,5 @@ function destinationArrayReturn($destinationName){
 }
 
 
-
+echo calculateTax(10.00);
 ?>
