@@ -43,6 +43,9 @@ function destinationArrayReturn($destinationName){
         return $destinationArray[$destinationName];
 }
 
+function register($name, $state){
+    return "Thank you $name, you are registered.";
+}
 
 echo calculateTax(10.00);
 ?>
