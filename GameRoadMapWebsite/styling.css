@@ -1,0 +1,22 @@
+.background{
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+#rcorners {
+    border-radius: 25px;
+    /* border-color: #848e9c;
+    border-width: 10px; */
+    background: #323f52;
+    padding: 20px;
+    width: 500px;
+    height: 150px;
+    margin: auto;
+  }
+#header{
+    font-size: xx-large;
+    font-family: Verdana;
+    color:white;
+}
