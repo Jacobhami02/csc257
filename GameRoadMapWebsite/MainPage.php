@@ -6,9 +6,12 @@
 <body class='background'>
 <!-- <div id='rcorners'><h1 id='header'>Reign-drop Roadmap</h1></div> -->
 <ul>
-  <li><a href="/MainPage.php">Home</a></li>
-  <li><a href="/suggestionForm.php">Contact Us</a></li>
-  <li><a href="/aboutDevPage.php">About Us</a></li>
+  <div>
+    <img>
+  </div>
+  <li><a href="/csc257/GameRoadMapWebsite/MainPage.php">Home</a></li>
+  <li><a href="/csc257/GameRoadMapWebsite/suggestionForm.php">Contact Us</a></li>
+  <li><a href="/csc257/GameRoadMapWebsite/aboutDevPage.php">About Us</a></li>
 </ul>
 
 </body>
