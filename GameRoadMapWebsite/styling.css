@@ -14,8 +14,7 @@
     border-width: 10px; */
     background: #323f52;
     padding: 20px;
-    width: 500px;
-    height: 150px;
+    width: 95%;
     margin: auto;
   }
 #header{
@@ -45,4 +44,6 @@ li a {
 }
 li a:hover {
     background-color: #111;
+    border-radius: 25px;
+
 }
