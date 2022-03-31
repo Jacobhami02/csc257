@@ -5,6 +5,10 @@
     background-position: center center;
     background-size: cover;
 }
+.logo{
+    max-width: 5%;
+    max-height: 3%;
+}
 #rcorners {
     border-radius: 25px;
     /* border-color: #848e9c;

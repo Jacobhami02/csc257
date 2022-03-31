@@ -6,8 +6,8 @@
 <body class='background'>
 <!-- <div id='rcorners'><h1 id='header'>Reign-drop Roadmap</h1></div> -->
 <ul>
-  <div>
-    <img src="/csc257/GameRoadMapWebsite/images/RainDropLogo.jpg">
+  <div class="logo">
+    <img  src="/csc257/GameRoadMapWebsite/images/RainDropLogo.jpg">
   </div>
   <li><a href="/csc257/GameRoadMapWebsite/MainPage.php">Home</a></li>
   <li><a href="/csc257/GameRoadMapWebsite/suggestionForm.php">Contact Us</a></li>
