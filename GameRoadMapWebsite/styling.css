@@ -8,13 +8,13 @@
 .logo{
     background-image: url('images/RainDropLogo.jpg');
 }
-#rcorners {
+.rcorners {
     border-radius: 25px;
     /* border-color: #848e9c;
     border-width: 10px; */
     background: #323f52;
     padding: 20px;
-    width: 95%;
+    width: 90%;
     margin: auto;
   }
 #header{
@@ -23,11 +23,8 @@
     color:white;
 }
 ul {
-    
-    list-style-type: none;
-    font-size: x-large;
-    margin: 3%;
-    padding: 10px;
+    list-style-type:none;
+    font-size: large;
     overflow: hidden;
     background-color: #333;
     
