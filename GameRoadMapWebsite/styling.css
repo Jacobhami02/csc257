@@ -10,13 +10,15 @@
     max-height: 3%;
 }
 #rcorners {
+    background-image: url('images/RainDropLogo.jpg');
+}
+.rcorners {
     border-radius: 25px;
     /* border-color: #848e9c;
     border-width: 10px; */
     background: #323f52;
     padding: 20px;
-    width: 500px;
-    height: 150px;
+    width: 90%;
     margin: auto;
   }
 #header{
@@ -25,13 +27,11 @@
     color:white;
 }
 ul {
-    
-    list-style-type: none;
-    font-size: xx-large;
-    margin: 0;
-    padding: 0;
+    list-style-type:none;
+    font-size: large;
     overflow: hidden;
     background-color: #333;
+    
   }
 li {
     float:left;
@@ -45,4 +45,6 @@ li a {
 }
 li a:hover {
     background-color: #111;
+    border-radius: 25px;
+
 }
