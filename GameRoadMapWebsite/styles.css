@@ -27,7 +27,7 @@
     overflow: hidden;
     width: 97%;
     border-radius: 10px;
-    padding-bottom: 1em;
+    padding-bottom: 1.25em;
     padding-top: .5em;
     /* position:; */
     margin-top:auto;
@@ -68,5 +68,5 @@ li a:hover {
 
 }
 #topButtonSpacing{
-    padding-top: 2.75em;
+    padding-top: 2.5em;
 }
