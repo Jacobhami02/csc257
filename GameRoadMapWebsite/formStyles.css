@@ -1,0 +1,32 @@
+#suggestionForm {
+    border: 1px solid grey;
+    width: 800px;
+    font-size: 22px;
+    line-height: 30px; 
+    padding: 5px;
+}
+.form_label {
+    width: 250px;
+    display: inline-block;
+    font-size: 22px;
+    padding: 5px;
+}
+.form_textbox {
+    width: 350px;
+    font-size: 22px; 
+}
+.form_dropdown {
+    width: 350px;
+    font-size: 18px;
+}
+.requiredIndicator {
+    color: red;
+    font-size: 24px;
+}
+.requiredHighlight {
+    background-color: #ffff00;
+}
+.requiredBox {
+    border: 2px solid #ffff00;
+}
+

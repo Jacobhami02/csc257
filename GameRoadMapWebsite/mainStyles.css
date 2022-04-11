@@ -5,6 +5,7 @@
     background-position: center center;
     background-size: cover; */
     background-color: rgb(255, 255, 255);
+    margin: 0;
 }
 .logo{
     height: auto; 
@@ -24,9 +25,10 @@
     color:rgb(0, 0, 0);
 }
 #topNav{
-    overflow: hidden;
-    width: 97%;
-    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* border-radius: 10px; */
     padding-bottom: 1.25em;
     padding-top: .5em;
     /* position:; */
@@ -49,7 +51,7 @@ li {
 li a {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 25px;
-	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.35);
     display: grid;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -69,4 +71,17 @@ li a:hover {
 }
 #topButtonSpacing{
     padding-top: 2.5em;
+}
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1;
+}
+.gridItems{
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 2px solid rgba(0, 0, 0, 0.8);
+	padding: 5px;
+	font-size: 20px;
+	text-align: center;
+	border-radius: .4em;
 }
