@@ -68,10 +68,10 @@ CREATE TABLE `participant` (  `participant_id` int(11) NOT NULL AUTO_INCREMENT,
     // Use the HTML attribute 'selected' for the default value
     // $form_state stores the chosen key
     // For example, $form_state="NJ"
-    foreach ($formStates as $value) {
+    foreach ($myStates as $value) {
         $myAttribute="";
 
-        echo "<option value=$myStates>$formStates</option>";}
+        echo "<option value=$value>$value</option>";}
     
 ?>
         </select>
