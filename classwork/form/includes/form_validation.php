@@ -14,6 +14,7 @@ $form_firstName = null;
 $form_lastName = null;
 $form_state = null;
 $form_preferredDestination = null;
+$form_preferredCruiseline = null;
 $form_city = null;
 $form_comments = null;
 $form_email = null;
@@ -27,6 +28,7 @@ $isLastNameValid = true;
 $isCityValid = true;
 $isStateValid = true;
 $isEmailListValid = true;
+$isEmailValid = true;
 
 // Determine if the form data should be processed
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -39,8 +41,10 @@ if ($isProcessingForm) {
     $form_firstName = $_POST["firstName"];
     $form_lastName = $_POST["lastName"];
     $form_city = $_POST["city"];
+    $form_email = $_POST["email"];
     $form_state = $_POST["state"];
     $form_preferredDestination = $_POST["preferredDestination"];
+    $form_preferredCruiseline = $_POST["preferredCruiseline"];
 
     // NOTE: To process checkboxes and radio buttons, we'll use isset()
 
@@ -69,6 +73,12 @@ if ($isProcessingForm) {
         $isCityValid = false;
     }
 
+    // Test e-mail
+    if (empty($form_email)) {
+        $isFormValid = false;
+        $isEmailValid = false;
+    }
+    
     // Test state
     if (empty($form_state)) {
         $isFormValid = false;
@@ -94,37 +104,6 @@ if ($isProcessingForm) {
     
     // We can now leverage our function we created in the data layer
     // Use a ternary to ensure form_state is not empty before calling the function
-    $userFriendlyState = $form_state ? getStateNameByAbbreviation($form_state) : "";
-
-    // NOTE: We no longer need the code below... which was too brittle anyway
-    // switch($form_state) {
-    //     case "CT":
-    //         $userFriendlyState = "Connecticut";
-    //         break;
-    //     case "NY":
-    //         $userFriendlyState = "New York";
-    //         break;
-    //     case "NJ":
-    //         $userFriendlyState = "New Jersey";
-    //         break;
-    // }
-
-    // Convert the posted value of preferred destination to something that is user friendly
-    
-    // Another way to retrieve the value based on the key:
-    // Use a ternary to ensure form_preferredDestination is not empty before calling the function
-    $userFriendlyDestination = $form_preferredDestination ? getDestinations()[$form_preferredDestination] : "";
-
-    // NOTE: We no longer need the code below... which was too brittle anyway
-    // switch($form_preferredDestination) {
-    //     case "EC":
-    //         $userFriendlyDestination = "Eastern Caribbean";
-    //         break;
-    //     case "WC":
-    //         $userFriendlyDestination = "Western Caribbean";
-    //         break;
-    // }
-
     // If form is valid, do not show the form
     if ($isFormValid) {
 
@@ -132,7 +111,9 @@ if ($isProcessingForm) {
         echo "<strong>Name:</strong> $form_firstName $form_lastName<br>";
         echo "<strong>City:</strong> $form_city<br>";
         echo "<strong>Residence:</strong> $userFriendlyState<br>";
+        echo "<strong>E-mail address:</strong> $form_email<br>";
         echo "<strong>Preferred Destination:</strong> $userFriendlyDestination<br>";
+        echo "<strong>Preferred Cruise Line:</strong> $userFriendlyCruiseline<br>";
 
         echo "<br><br>";
 
@@ -144,12 +125,35 @@ if ($isProcessingForm) {
 
         // Hide the form since we're done processing
         $showForm = false;
+
+        // TODO: Add insert SQL statement here!
+        /* 
+        for reference:
+            
+        INSERT INTO `participant` (`participant_id`, `first_name`, `last_name`, `city`,
+         `email_address`, `state`, `preferred_destination`, `preferred_cruiseline`, 
+         `mailing_list`) VALUES (NULL, 'TestFirstName', 'TestLastName', 'TestCity', 
+         'test@test.com', 'Connecticut', 'Bermuda', 'Carnival', 'yes');
+        */
+        $sql = "INSERT INTO `participant` (`participant_id`, `first_name`, `last_name`, `city`,
+        `email_address`, `state`, `preferred_destination`, `preferred_cruiseline`, 
+        `mailing_list`) VALUES (NULL, '$form_firstName', '$form_lastName', 
+        '$form_city', 
+        '$form_email', '$form_state', '$form_preferredDestination', 
+        '$form_preferredCruiseline', '$form_emailList');";
+
+        // Pass the SQL into the database to insert the record
+        queryDatabase($sql);
+        
+
     } else { // The form is not valid
         echo "<div style='color: red; font-weight: bold'>Please fill in all the required fields:</div><br>";
-        if (!$isFirstNameValid) { echo "Please enter your first name.<br>"; };
-        if (!$isLastNameValid) { echo "Please enter your last name.<br>"; };
-        if (!$isCityValid) { echo "Please enter your city.<br>"; };
-        if (!$isStateValid) { echo "Please choose a State.<br>"; };
+
+        // Removed in favor of highlights
+        // if (!$isFirstNameValid) { echo "Please enter your first name.<br>"; };
+        // if (!$isLastNameValid) { echo "Please enter your last name.<br>"; };
+        // if (!$isCityValid) { echo "Please enter your city.<br>"; };
+        // if (!$isEmailValid) { echo "Please enter your e-mail address.<br>"; };
+        // if (!$isStateValid) { echo "Please choose a State.<br>"; };
     }
 }
-

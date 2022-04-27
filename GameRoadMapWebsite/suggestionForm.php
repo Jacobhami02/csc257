@@ -1,22 +1,9 @@
-
-<!-- 
-    When setting up server, you can use this to create table: 
-
-CREATE TABLE `participant` (  `participant_id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(50) NOT NULL,  `last_name` varchar(50) NOT NULL,  `city` 
-  varchar(50) NOT NULL,  `email_address` varchar(100) NOT NULL,  `state` 
-  varchar(30) NOT NULL,  `preferred_destination` varchar(30) DEFAULT NULL,  
-  `preferred_cruiseline` varchar(30) DEFAULT NULL,  `mailing_list` varchar(3) 
-  NOT NULL,  PRIMARY KEY (`participant_id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
--->
 <?php
     require_once "dataLayer.php";
     require_once "formValidation.php";
     
     $myStates = getStates();
-
     $required = "";
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +13,6 @@ CREATE TABLE `participant` (  `participant_id` int(11) NOT NULL AUTO_INCREMENT,
   <meta http-equiv="Cache-control" content="no-cache">
   <title>Raindrop Roadmap</title>
   <link rel="stylesheet" href="mainStyles.css">
-  <link rel="stylesheet" href="formStyles.css">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -43,52 +29,42 @@ CREATE TABLE `participant` (  `participant_id` int(11) NOT NULL AUTO_INCREMENT,
 </ul>
 </nav>
 <!-- TopNavEnd -->
-<div class=mainContent>
-<h3>Fill out the form below to send your suggestion directly to the developer:</h3>
+<div class=mainContent><br>
+<?php if ($showForm === true) { ?>
+<h3>Fill out the form below to send your suggestion directly to the developer:</h3><br>
 <!-- Form -->
-<form class="suggestionForm">
+<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
     <!-- First Name -->
-        <label>First Name:</label>
-        <input <?php echo $required; ?>>
-        <span class="requiredIndicator">*</span><br>
+        <label for="firstName" class="formLabel">First Name:</label>
+        <input name="firstName" value="<?php echo $formFirstName; ?>" class="formTextbox" <?php echo $required;?> <?php if(!$formFirstName && $isProcessingForm) echo 'requiredHighlight';?>>
+        <?php if (!$formFirstName) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
     <!-- Email -->
-        <label>Email Address:</label>
-        <input <?php echo $required; ?>>
-        <span class="requiredIndicator">*</span><br>
+        <label class="formLabel">Email Address:</label>
+        <input name="email" value="<?php echo $formEmail; ?>" class="formTextbox" <?php echo $required; ?> <?php if(!$formEmail && $isProcessingForm) echo 'requiredHighlight';?>>
+        <?php if (!$formEmail) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
     <!-- State -->
         <label for="state" class="formLabel">State:</label>
-        <select>
-        <?php echo $required; ?>>
-
-<option value="">Please select a State...</option>
-<?php
-    // Associate array
-
-    // echo "<option value=>$value</option>";
-    // Use the HTML attribute 'selected' for the default value
-    // $form_state stores the chosen key
-    // For example, $form_state="NJ"
-    foreach ($myStates as $value) {
-        $myAttribute="";
-
-        echo "<option value=$value>$value</option>";}
-    
-?>
+        <select name="state" value="<?php echo $formState; ?>" class="formDropdown" name="state" <?php echo $required; ?>>
+      <option value="">Please select a State...</option>
+      <?php
+        foreach ($myStates as $key => $value) {
+          $myAttribute="";
+          if ($key === $form_state) { 
+              $myAttribute="selected";}
+          echo "<option value=$key $myAttribute>$value</option>";}?>
         </select>
-        <span class="requiredIndicator">*</span><br>
-
-        <!-- Terms -->
-        <input type="checkbox"
-        name="terms"
-        <?php echo $required; ?>>I accept the terms<br>
-            
-        <input type="submit" value="Submit your entry">
-
-
-
-
+        <?php if (!$formState) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
+    <!-- Suggestion -->
+        <label for="suggestion" class="formLabel">Suggestion:</label>
+        <textarea name="suggestion" value="<?php echo $formTextSuggestion; ?>" class="formTextbox" <?php echo $required;?> <?php if(!$formTextSuggestion && $isProcessingForm) echo 'requiredHighlight';?>></textarea>
+        <?php if (!$formTextSuggestion) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
+    <!-- Terms -->
+        <input type="checkbox" name="terms" value="<?php echo $formTerms; ?>" class="termsBox"
+        <?php echo $required; ?>>I accept the terms<br><br>
+    <!-- Submit Button   -->
+        <input class="submitButton" type="submit" value="Submit">
 </form>
-
+<?php } ?>
 </div>
 <footer><?php include "footer.php"; ?></footer>
 </body>

@@ -1,3 +1,3 @@
 <?php
-echo "<strong>Living Water Studios - 2022</strong>";
+// echo "<strong>Living Water Studios - 2022</strong>";
 ?>

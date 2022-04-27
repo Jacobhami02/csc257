@@ -68,7 +68,6 @@ li a:hover {
     border:1px solid rgb(255, 255, 255);
     border-radius: 25px;
 	box-shadow: inset 0 5px 10px 0 rgba(0, 0, 0, 0.25);
-
 }
 #topButtonSpacing{
     padding-top: 2.5em;
@@ -88,4 +87,75 @@ li a:hover {
 }
 .mainContent{
 margin: 2em;
+}
+
+/* ------------------------------------------------------- */
+/*                        FORM STYLING                     */
+/* ------------------------------------------------------- */
+
+.suggestionForm {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 5px;
+    min-width:fit-content;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 1);
+}
+.formLabel {
+    width: 250px;
+    display: inline-block;
+    font-size: 20px;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+.formTextbox {
+    width: 350px;
+    font-size: 18px; 
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.formTextbox:hover{
+	box-shadow: inset 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+.formTextbox:focus{
+	box-shadow: inset 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+.formDropdown {
+    width: 350px;
+    font-size: 15px; 
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.formDropdown:hover{
+    box-shadow: inset 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+.requiredIndicator {
+    color: red;
+    font-size: 24px;
+}
+.requiredHighlight {
+    background-color: #ffff00;
+}
+.requiredBox {
+    border: 2px solid #ffff00;
+}
+.termsBox{
+    font-size: 20px;
+}
+.submitButton{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 25px;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.35);
+    display: grid;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 17px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-decoration: none;
+}
+.submitButton:hover{
+    background-color: rgb(218, 218, 218);
+    border-radius: 25px;
+    border:1px solid rgb(255, 255, 255);
+    border-radius: 25px;
+	box-shadow: inset 0 5px 10px 0 rgba(0, 0, 0, 0.25);
 }

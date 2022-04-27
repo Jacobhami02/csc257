@@ -23,7 +23,7 @@
 </nav>
 <!-- TopNavEnd -->
 <div class=mainContent>
-  temp text
+
 </div>
 <footer><?php include "footer.php"; ?></footer>
 </body>

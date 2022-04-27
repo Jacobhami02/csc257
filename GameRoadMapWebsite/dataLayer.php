@@ -20,7 +20,7 @@ function queryDatabase($sql) {
     $conn = new mysqli($serverName, $userName, $password ,$db, $port);
 
     // 2. Get the results and return
-    $results = $conn->query($sql);
+    $results = $conn->query($sql);// Add this to get error: or die($conn->error)
 
     return $results;
 }
@@ -32,15 +32,22 @@ function queryDatabase($sql) {
  */
 function getStates() {
     // Get the results
-    $results = queryDatabase("select * from state order by StateName");
+    $results = queryDatabase("select * from state order by name");
 
     // 4. Output the results
     $statesArray = array(); // Create an empty array
 
     while($row = $results->fetch_assoc()) { // Loop over the results from the query
-        $statesArray = [$row['StateName']]; // Build the array
+        $statesArray[$row['abbreviation']] = $row['name']; // Build the array
     }
 
     // Return the array
     return $statesArray;
+}
+
+function recordEntry($firstName, $email, $state, $suggestion){
+    date_default_timezone_set('America/New_York');
+    $dateTime = date('Y-m-d H:i:s');
+
+    queryDatabase("INSERT INTO suggestionResponses (`firstName`, `email`, `state`, `suggestion`, `time`) VALUES ($firstName, $email, $state, $suggestion, $dateTime)");
 }
