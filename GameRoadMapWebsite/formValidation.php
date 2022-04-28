@@ -68,19 +68,16 @@ if ($isProcessingForm) {
         $isTermsValid = false;
     }
     if ($isFormValid === true) {
-
-        $showForm = false;
-
         echo "Thank you $formFirstName. We have recorded the following entry:<br><br>";
         echo "<strong>Name:</strong> $formFirstName<br>";
         echo "<strong>Residence:</strong> $formState<br>";
         echo "<br><br>";
 
-        recordEntry($formFirstName, $formEmail, $formState, $formTextSuggestion);
-        // Hide the form since we're done processing
+        // recordEntry($formFirstName, $formEmail, $formState, $formTextSuggestion);
+
         $showForm = false;
 
-    } else { // The form is not valid
+    } else {
         echo "<div style='color: red; font-weight: bold'>Please fill in all the required fields:</div>";
     }
 }

@@ -88,7 +88,26 @@ li a:hover {
 .mainContent{
 margin: 2em;
 }
-
+.mainPageBackground{
+    margin-left: 0px;
+}
+.roadmapImage{
+    padding-left: 1em;
+    width: 1400px;
+    height: 2300px;
+}
+.devPageStyles{
+    padding-top: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+    font-size: 22px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#startingName{
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
 /* ------------------------------------------------------- */
 /*                        FORM STYLING                     */
 /* ------------------------------------------------------- */
