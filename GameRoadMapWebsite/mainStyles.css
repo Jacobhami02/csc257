@@ -97,17 +97,35 @@ margin: 2em;
     height: 2300px;
 }
 .devPageStyles{
-    padding-top: 2em;
     padding-left: 3em;
     padding-right: 3em;
-    font-size: 22px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-family:'open sans', sans-serif;
+    line-height: 33px;
+
+}
+.devHeader{
+    font-size: 38px;
+    font-family:'open sans', sans-serif;
+    font-weight:lighter;
+    padding-left: 2em;
+    padding-top: 0.8em;
+    color: rgb(8, 34, 127);
+
 }
 #startingName{
-    font-size: 35px;
+    font-size: 30px;
     color: rgb(0, 0, 0);
-    font-weight: lighter;
+    font-weight:normal;
 }
+.formHeader{
+    font-size: 38px;
+    padding-bottom: 0.2em;
+    font-family:'open sans', sans-serif;
+    font-weight:lighter;
+    color: rgb(0, 0, 0);
+}
+
 /* ------------------------------------------------------- */
 /*                        FORM STYLING                     */
 /* ------------------------------------------------------- */
@@ -148,15 +166,13 @@ margin: 2em;
     color: red;
     font-size: 24px;
 }
+/*
 .requiredHighlight {
     background-color: #ffff00;
 }
 .requiredBox {
     border: 2px solid #ffff00;
-}
-.termsBox{
-    font-size: 20px;
-}
+} */
 .submitButton{
     border: 1px solid rgb(255, 255, 255);
     border-radius: 25px;

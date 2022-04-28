@@ -45,9 +45,9 @@ function getStates() {
     return $statesArray;
 }
 
-function recordEntry($firstName, $email, $state, $suggestion){
+function recordEntry($formFirstName, $formEmail, $formState, $formTextSuggestion){
     date_default_timezone_set('America/New_York');
     $dateTime = date('Y-m-d H:i:s');
 
-    queryDatabase("INSERT INTO suggestionResponses (`firstName`, `email`, `state`, `suggestion`, `time`) VALUES ($firstName, $email, $state, $suggestion, $dateTime)");
+    queryDatabase("INSERT INTO suggestionResponses (`firstName`, `email`, `state`, `suggestion`, `time`) VALUES ('$formFirstName', '$formEmail', '$formState', '$formTextSuggestion', '$dateTime')");
 }

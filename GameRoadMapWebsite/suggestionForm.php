@@ -25,13 +25,14 @@
   <li><img class="logo" src="/csc257/GameRoadMapWebsite/images/RainDropLogo.jpg"></li>
   <li id="topButtonSpacing"><a href="/csc257/GameRoadMapWebsite/MainPage.php">Home</a></li>
   <li id="topButtonSpacing"><a href="/csc257/GameRoadMapWebsite/aboutDevPage.php">About The Game</a></li>
-  <li id="topButtonSpacing"><a href="/csc257/GameRoadMapWebsite/suggestionForm.php">Suggest a Feature</a></li>
+  <li id="topButtonSpacing"><a href="/csc257/GameRoadMapWebsite/suggestionForm.php">Suggestions and Feedback</a></li>
 </ul>
 </nav>
 <!-- TopNavEnd -->
 <div class=mainContent><br>
 <?php if ($showForm === true) { ?>
-<h3>Fill out the form below to send your suggestion directly to the developer:</h3><br>
+<h2 class="formHeader">Suggest a Feature or Give Some Feedback:</h2>
+<h3>Fill out the form below to send your suggestion directly to the developer:</h3>
 <!-- Form -->
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
     <!-- First Name -->
@@ -40,32 +41,28 @@
         <?php if (!$formFirstName) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
     <!-- Email -->
         <label class="formLabel">Email Address:</label>
-        <input name="email" value="<?php echo $formEmail; ?>" class="formTextbox" <?php echo $required; ?> <?php if(!$formEmail && $isProcessingForm) echo 'requiredHighlight';?>>
-        <?php if (!$formEmail) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
+        <input name="email" value="<?php echo $formEmail; ?>" class="formTextbox"><br><br>
     <!-- State -->
         <label for="state" class="formLabel">State:</label>
-        <select name="state" value="<?php echo $formState; ?>" class="formDropdown" name="state" <?php echo $required; ?>>
-      <option value="">Please select a State...</option>
-      <?php
+        <select name="state" value="" class="formDropdown" name="state"?>>
+        <option value="">Please select a State...</option>
+        <?php
         foreach ($myStates as $key => $value) {
           $myAttribute="";
-          if ($key === $form_state) { 
+          if ($key === $formState) { 
               $myAttribute="selected";}
           echo "<option value=$key $myAttribute>$value</option>";}?>
-        </select>
-        <?php if (!$formState) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
+        </select><br><br>
     <!-- Suggestion -->
         <label for="suggestion" class="formLabel">Suggestion:</label>
         <textarea name="suggestion" value="<?php echo $formTextSuggestion; ?>" class="formTextbox" <?php echo $required;?> <?php if(!$formTextSuggestion && $isProcessingForm) echo 'requiredHighlight';?>></textarea>
         <?php if (!$formTextSuggestion) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
-    <!-- Terms -->
-        <input type="checkbox" name="terms" value="<?php echo $formTerms; ?>" class="termsBox"
-        <?php echo $required; ?>>I accept the terms<br><br>
     <!-- Submit Button   -->
         <input class="submitButton" type="submit" value="Submit">
 </form>
 <?php } ?>
 </div>
-<footer><?php include "footer.php"; ?></footer>
 </body>
 </html>
+<?php
+?>
