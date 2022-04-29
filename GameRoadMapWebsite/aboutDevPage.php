@@ -30,19 +30,11 @@
     You play as a once happy droplet of water who's time has come to go through the water cycle of life.
     You fear the pain of going through the water cycle of life and despise the crowded hordes of water who's only intention is to absorb you, molecule by molecule.
     Although your fear is overpowering, you have hope that others don't. 
-    You have heard the rumors of the infamous scientist, Doctor Water, who allegedly discovered a way to get back to the clouds, where a water droplet's life is peaceful and heavenly, without being torn apart molecule by molecule.
+    You have heard the rumors of the infamous scientist, Doctor Hydrophobe, who allegedly discovered a way to get back to the clouds, where a water droplet's life is peaceful and heavenly, without being torn apart molecule by molecule.
     It has become your mission to find him and hope the rumors are true.
     It won't be an easy journey. 
-    Now that you are falling from your cloud, you have to avoid anything that will stop you from finding Doctor Water, otherwise, you risk suffering through the process of the water cycle once again.
+    Now that you are falling from your cloud, you have to avoid anything that will stop you from finding Doctor Hydrophobe, otherwise, you risk suffering through the process of the water cycle once again.
   </p>
-  <!-- <p>
-    <h3>Features:</h3>
-    <ul>
-      <li>
-        Test Bullet
-      </li>
-    </ul>
-  </p> -->
 </div>
 </div>
 </body>

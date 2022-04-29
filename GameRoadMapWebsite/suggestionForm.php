@@ -37,7 +37,7 @@
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
     <!-- First Name -->
         <label for="firstName" class="formLabel">First Name:</label>
-        <input name="firstName" value="<?php echo $formFirstName; ?>" class="formTextbox" <?php echo $required;?> <?php if(!$formFirstName && $isProcessingForm) echo 'requiredHighlight';?>>
+        <input name="firstName" value="<?php echo $formFirstName; ?>" class="formTextbox" <?php echo $required;?>>
         <?php if (!$formFirstName) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
     <!-- Email -->
         <label class="formLabel">Email Address:</label>
@@ -55,8 +55,8 @@
         </select><br><br>
     <!-- Suggestion -->
         <label for="suggestion" class="formLabel">Suggestion:</label>
-        <textarea name="suggestion" value="<?php echo $formTextSuggestion; ?>" class="formTextbox" <?php echo $required;?> <?php if(!$formTextSuggestion && $isProcessingForm) echo 'requiredHighlight';?>></textarea>
-        <?php if (!$formTextSuggestion) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
+        <textarea name="suggestion" placeholder="Write your suggestion or feedback here." class="formTextbox" <?php echo $required;?>><?php /*Sticky Text Area Feature: */ if(isset($_POST['suggestion'])){echo htmlentities($_POST['suggestion'], ENT_QUOTES);}?></textarea>
+        <?php if (!$formSuggestion) {echo '<span class="requiredIndicator">*</span>';}?><br><br>
     <!-- Submit Button   -->
         <input class="submitButton" type="submit" value="Submit">
 </form>

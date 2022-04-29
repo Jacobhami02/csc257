@@ -1,5 +1,4 @@
 <?php
-
 require_once "dataLayer.php";
 
 $isProcessingForm = false;          
@@ -9,10 +8,10 @@ $showForm = true;
 $formFirstName = null;
 $formState = null;
 $formEmail = null;
-$formTextSuggestion = null;
+$formSuggestion = null;
 
 $isFirstNameValid = true;
-$isTextSuggestionValid = true;
+$isSuggestionValid = true;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $isProcessingForm = true; 
@@ -22,28 +21,23 @@ if ($isProcessingForm) {
     $formFirstName = $_POST["firstName"];
     $formState = $_POST["state"];
     $formEmail = $_POST["email"];
-    $formTextSuggestion = $_POST["suggestion"];
-    // $formTerms = isset($_POST['terms']) ? $_POST['terms'] : null;
+    $formSuggestion = $_POST["suggestion"];
 
-    // Test first name
     if (empty($formFirstName)) {
         $isFormValid = false;
         $isFirstNameValid = false;
     }
 
-    // Test Suggestion Box
-    if (empty($formTextSuggestion)) {
+    if (empty($formSuggestion)) {
         $isFormValid = false;
-        $isTextSuggestionValid = false;
+        $isSuggestionValid = false;
     }
 
-    // $requiredFields=null;
-
     if ($isFormValid === true) {
-        echo "<br><br><p style='text-indent: 50px; font-size: 20px;'>Thank you $formFirstName. We have recieved your suggestion and will review it as soon as possible.
+        echo "<br><br><p style='text-indent: 50px; font-size: 20px;'>Thank you $formFirstName. We have recieved your feedback and will review it as soon as possible.
         Thank you for your feedback!</p>";
 
-        recordEntry($formFirstName, $formEmail, $formState, $formTextSuggestion);
+        recordEntry($formFirstName, $formEmail, $formState, $formSuggestion);
 
         $showForm = false;
 

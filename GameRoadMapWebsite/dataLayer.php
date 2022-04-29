@@ -44,8 +44,9 @@ function getStates() {
     // Return the array
     return $statesArray;
 }
-
+// --Suggestions upload function--
 function recordEntry($formFirstName, $formEmail, $formState, $formTextSuggestion){
+    // Time is set below and set to a variable.
     date_default_timezone_set('America/New_York');
     $dateTime = date('Y-m-d H:i:s');
 
