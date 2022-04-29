@@ -23,7 +23,7 @@
 <nav>
 <ul  id="topNav">
   <li><img class="logo" src="/csc257/GameRoadMapWebsite/images/RainDropLogo.jpg"></li>
-  <li id="topButtonSpacing"><a href="/csc257/GameRoadMapWebsite/MainPage.php">Home</a></li>
+  <li id="topButtonSpacing"><a href="/csc257/GameRoadMapWebsite/MainPage.php">Road Map</a></li>
   <li id="topButtonSpacing"><a href="/csc257/GameRoadMapWebsite/aboutDevPage.php">About The Game</a></li>
   <li id="topButtonSpacing"><a href="/csc257/GameRoadMapWebsite/suggestionForm.php">Suggestions and Feedback</a></li>
 </ul>
